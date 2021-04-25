@@ -5418,7 +5418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8943319337079813392, guid: b8474a8f329a145a9bac75de9084185a, type: 3}
-  setCoolDown: 2
+  setCoolDown: 0.5
   startForce: 5000
 --- !u!1 &1386569374
 GameObject:
