@@ -3044,3 +3044,45 @@ Received Import Request.
 Start importing Assets/Prefab/Bullet.prefab using Guid(b8474a8f329a145a9bac75de9084185a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ca2e089403db37c7b20d3cd8d1cce4') in 0.165753 seconds
   Import took 0.169983 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005439 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.284 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1126 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 168.4 MB.
+System memory in use after: 168.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1944.
+Total: 10.254704 ms (FindLiveObjects: 0.802475 ms CreateObjectMapping: 0.176644 ms MarkObjects: 8.655048 ms  DeleteObjects: 0.615776 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000735 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.205 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1126 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 168.6 MB.
+System memory in use after: 168.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1947.
+Total: 2.112990 ms (FindLiveObjects: 0.224425 ms CreateObjectMapping: 0.042645 ms MarkObjects: 1.779023 ms  DeleteObjects: 0.064642 ms)
+

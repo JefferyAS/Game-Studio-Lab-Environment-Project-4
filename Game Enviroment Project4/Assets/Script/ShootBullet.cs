@@ -21,6 +21,7 @@ public class ShootBullet : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space)) {
                 GameObject newBullet=Instantiate(bullet,transform.position,Quaternion.identity);
                 newBullet.GetComponent<Rigidbody>().AddForce(0,0,startForce);
+                coolDown = setCoolDown;
             }
         }
         else
