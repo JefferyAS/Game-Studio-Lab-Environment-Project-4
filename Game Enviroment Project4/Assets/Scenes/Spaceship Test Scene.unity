@@ -358,7 +358,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.393
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6598,7 +6598,7 @@ Terrain:
   m_GameObject: {fileID: 1562444141}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 0}
+  m_TerrainData: {fileID: 15600000, guid: 6286edefc413d45699611d950fe7dc87, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
