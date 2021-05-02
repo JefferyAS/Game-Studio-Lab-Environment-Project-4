@@ -7,6 +7,7 @@ public class ShootBullet : MonoBehaviour
     public GameObject bullet;
     public float setCoolDown;
     public float startForce;
+    public PlayerRecorder playerRecorder;
     private float coolDown;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class ShootBullet : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space)) {
                 GameObject newBullet=Instantiate(bullet,transform.position,Quaternion.identity);
                 newBullet.GetComponent<Rigidbody>().AddForce(0,0,startForce);
+                playerRecorder.RecordShooting();
                 coolDown = setCoolDown;
             }
         }
