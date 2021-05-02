@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HPSystem : MonoBehaviour
+public class ObstacleScript : MonoBehaviour
 {
-    public int maxHP;
-    public int HP;
-    public bool isEnemyShip;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +15,11 @@ public class HPSystem : MonoBehaviour
     {
         
     }
-    public void ResetHP()
-    {
-        HP = maxHP;
-    }
-    public void LoseHealth(int damage) {
-        HP -= damage;
-    }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Obstacle") {
-            LoseHealth(1);
+        if (collision.gameObject.tag=="Player") {
+            //create particle effect
+            Destroy(gameObject);
         }
     }
 }
