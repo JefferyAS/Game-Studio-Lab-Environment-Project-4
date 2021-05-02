@@ -55,6 +55,7 @@ public class PerspectiveSwitcher : MonoBehaviour
             constantMovement.isActive = true;
             spaceshipMovement.enabled = true;
             shootBullet.enabled = true;
+            camera3d.GetComponent<Animator>().enabled = false;
         }
         if (isBack && leftTime>0) {
             Color color = screenSwtichImage.color;
@@ -73,6 +74,7 @@ public class PerspectiveSwitcher : MonoBehaviour
             Color color = screenSwtichImage.color;
             screenSwtichImage.color = new Color(color.r, color.g, color.b,0);
             
+
         }
     }
     public void StartSwitch() {
@@ -80,6 +82,7 @@ public class PerspectiveSwitcher : MonoBehaviour
         isSwitching = true;
         posDiff= targetPosition.position-spaceship.transform.position;
         rotDiff = -spaceship.transform.rotation.eulerAngles;
+        camera3d.GetComponent<Animator>().enabled = true;
         camera3d.GetComponent<Animator>().SetTrigger("switch");
         extendedFlycam.enabled = false;
     }

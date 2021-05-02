@@ -29,22 +29,65 @@ public class ExtendedFlycam : MonoBehaviour
 	public float slowMoveFactor = 0.25f;
 	public float fastMoveFactor = 3;
 
-	private float rotationX = 0.0f;
-	private float rotationY = 0.0f;
+	private float camRotationX = 0.0f;
+	private float camRotationY = 0.0f;
+	private float shipRotationX = 0.0f;
+	private float shipRotationY = 0.0f;
+	private Vector3 startRot;
+
+	public float spaceshipTunringSpeed;
 
 	void Start()
 	{
 		Screen.lockCursor = true;
+		startRot = camera.transform.localEulerAngles;
 	}
 
 	void Update()
 	{
-		rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
-		rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
-		rotationY = Mathf.Clamp(rotationY, -30, 30);
+		camRotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
+		camRotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
+		camRotationY = Mathf.Clamp(camRotationY, -30, 30);
+		camRotationX = Mathf.Clamp(camRotationX, -20, 20);
+		float turning = spaceshipTunringSpeed * Time.deltaTime;
+		if (camRotationY > 0 && camRotationY > turning)
+		{
+			camRotationY -= turning;
+			shipRotationY += turning;
+		}
+		else if (camRotationY < 0 && Mathf.Abs(camRotationY) > turning)
+		{
+			camRotationY += turning;
+			shipRotationY -= turning;
+		}
+		else if (Mathf.Abs(camRotationY) < turning) {
+			shipRotationY += camRotationY;
+			camRotationY = 0;
+		}
 
-		transform.localRotation = Quaternion.AngleAxis(rotationX, Vector3.up);
-		transform.localRotation *= Quaternion.AngleAxis(rotationY, Vector3.left);
+		if (camRotationX > 0 && camRotationX > turning)
+		{
+			camRotationX -= turning;
+			shipRotationX += turning;
+		}
+		else if (camRotationX < 0 && Mathf.Abs(camRotationX) > turning)
+		{
+			camRotationX += turning;
+			shipRotationX -= turning;
+		}
+		else if (Mathf.Abs(camRotationX) < turning)
+		{
+			shipRotationX += camRotationX;
+			camRotationX = 0;
+		}
+
+
+		camera.transform.localRotation = Quaternion.AngleAxis(camRotationX-startRot.y, Vector3.up);
+		camera.transform.localRotation *= Quaternion.AngleAxis(camRotationY-startRot.x, Vector3.left);
+
+		transform.localRotation = Quaternion.AngleAxis(shipRotationX, Vector3.up);
+		transform.localRotation *= Quaternion.AngleAxis(shipRotationY, Vector3.left);
+
 
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
