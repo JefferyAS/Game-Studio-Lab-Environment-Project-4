@@ -10,6 +10,7 @@ public class PerspectiveSwitcher : MonoBehaviour
     public GameObject camera2d;
     public Transform targetPosition;
     public float switchTime = 2;
+    public float backTime = 5;
     public Vector3 camePos;
     private float leftTime;
     public ConstantMovement constantMovement;
@@ -87,7 +88,7 @@ public class PerspectiveSwitcher : MonoBehaviour
         extendedFlycam.enabled = false;
     }
     public void StartBack() {
-        leftTime = switchTime;
+        leftTime = backTime;
         isBack = true;
     }
 }

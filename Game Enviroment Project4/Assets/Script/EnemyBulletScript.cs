@@ -24,11 +24,13 @@ public class EnemyBulletScript : MonoBehaviour
     {
         if (other.tag == "Obstacle")
         {
+            GameObject.Find("Hit Audio Player").GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
         if (other.tag == "Player")
         {
+            GameObject.Find("Hit Audio Player").GetComponent<AudioSource>().Play();
             other.GetComponent<HPSystem>().LoseHealth(1);
             Destroy(this.gameObject);
         }

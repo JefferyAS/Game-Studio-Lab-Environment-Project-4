@@ -7,6 +7,9 @@ public class SpaceshipMovement : MonoBehaviour
     Rigidbody rigidbody;
     public float forwardForce;
     public float rightForce;
+
+    public AudioSource aceAudio;
+    public AudioSource deceAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +20,18 @@ public class SpaceshipMovement : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow)) {
+            if (!aceAudio.isPlaying) {
+                aceAudio.Play();
+            }
             rigidbody.AddForce(new Vector3(0,0, forwardForce) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
+            if (!deceAudio.isPlaying)
+            {
+                deceAudio.Play();
+            }
+            aceAudio.Stop();
             rigidbody.AddForce(new Vector3(0, 0, -forwardForce) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))

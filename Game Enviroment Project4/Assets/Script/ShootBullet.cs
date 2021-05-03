@@ -9,6 +9,7 @@ public class ShootBullet : MonoBehaviour
     public float startForce;
     public PlayerRecorder playerRecorder;
     private float coolDown;
+    public STRTAudio audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class ShootBullet : MonoBehaviour
     {
         if (coolDown <= 0) {
             if (Input.GetKeyDown(KeyCode.Space)) {
+                audio.PlayMusic();
                 GameObject newBullet=Instantiate(bullet,transform.position,Quaternion.identity);
                 newBullet.GetComponent<Rigidbody>().AddForce(0,0,startForce);
                 playerRecorder.RecordShooting();

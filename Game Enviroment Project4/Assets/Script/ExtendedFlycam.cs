@@ -37,6 +37,9 @@ public class ExtendedFlycam : MonoBehaviour
 
 	public float spaceshipTunringSpeed;
 
+	public AudioSource aceAudio;
+	public AudioSource deceAudio;
+
 	void Start()
 	{
 		Screen.lockCursor = true;
@@ -91,6 +94,9 @@ public class ExtendedFlycam : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
+			if (!aceAudio.isPlaying) {
+				aceAudio.Play();
+			}
 			rigidbody.velocity=(transform.forward * (normalMoveSpeed * fastMoveFactor) * Input.GetAxis("Vertical") * Time.deltaTime);
 			rigidbody.velocity += transform.right * (normalMoveSpeed * fastMoveFactor) * Input.GetAxis("Horizontal") * Time.deltaTime;
 		}
