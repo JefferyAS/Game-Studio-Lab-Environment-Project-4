@@ -21,9 +21,14 @@ public class BulletScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="Obstacle"||other.tag=="Enemy") {
+        if (other.tag=="Obstacle") {
             GameObject.Find("Hit Audio Player").GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (other.tag == "Enemy")
+        {
+            other.gameObject.GetComponent<HPSystem>().LoseHealth(1);
             Destroy(this.gameObject);
         }
     }
