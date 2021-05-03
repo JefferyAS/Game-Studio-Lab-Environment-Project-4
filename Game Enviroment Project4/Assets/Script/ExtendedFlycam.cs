@@ -40,6 +40,8 @@ public class ExtendedFlycam : MonoBehaviour
 	public AudioSource aceAudio;
 	public AudioSource deceAudio;
 
+	public ParticleSystem particle1;
+	public ParticleSystem particle2;
 	void Start()
 	{
 		Screen.lockCursor = true;
@@ -92,6 +94,14 @@ public class ExtendedFlycam : MonoBehaviour
 		transform.localRotation *= Quaternion.AngleAxis(shipRotationY, Vector3.left);
 
 
+		if (Input.GetAxis("Vertical")>0) {
+			particle1.Play();
+			particle2.Play();
+		}
+        else {
+			particle1.Stop();
+			particle2.Stop();
+		}
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
 			if (!aceAudio.isPlaying) {

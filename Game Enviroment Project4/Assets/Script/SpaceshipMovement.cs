@@ -10,6 +10,8 @@ public class SpaceshipMovement : MonoBehaviour
 
     public AudioSource aceAudio;
     public AudioSource deceAudio;
+    public ParticleSystem particle1;
+    public ParticleSystem particle2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class SpaceshipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        particle1.Play();
+        particle2.Play();
         if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow)) {
             if (!aceAudio.isPlaying) {
                 aceAudio.Play();
@@ -43,4 +47,5 @@ public class SpaceshipMovement : MonoBehaviour
             rigidbody.AddForce(new Vector3(-rightForce, 0, 0) * Time.deltaTime);
         }
     }
+    
 }
