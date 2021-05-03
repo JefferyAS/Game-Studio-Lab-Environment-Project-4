@@ -28,7 +28,9 @@ public class HPSystem : MonoBehaviour
     }
     public void LoseHealth(int damage) {
         HP -= damage;
-        hitAudio.Play();
+        if (!isEnemyShip) {
+            hitAudio.Play();
+        }
         if (HP<=0) {
             deathAudio.Play();
             if (isEnemyShip)

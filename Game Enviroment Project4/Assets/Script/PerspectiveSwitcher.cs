@@ -21,6 +21,7 @@ public class PerspectiveSwitcher : MonoBehaviour
     public bool isSwitching;
     private Vector3 posDiff;
     private Vector3 rotDiff;
+    private Rigidbody rigidbody;
 
     public bool isBack;
     public Transform backPoint;
@@ -33,6 +34,7 @@ public class PerspectiveSwitcher : MonoBehaviour
     {
         cameraBackPoint = camera3d.transform.localPosition;
         cameraBackRotation = camera3d.transform.localRotation;
+        rigidbody = spaceship.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -57,6 +59,8 @@ public class PerspectiveSwitcher : MonoBehaviour
             spaceshipMovement.enabled = true;
             shootBullet.enabled = true;
             camera3d.GetComponent<Animator>().enabled = false;
+            rigidbody.constraints= RigidbodyConstraints.FreezePositionY| RigidbodyConstraints.FreezeRotation;
+
         }
         if (isBack && leftTime>0) {
             Color color = screenSwtichImage.color;
@@ -74,7 +78,7 @@ public class PerspectiveSwitcher : MonoBehaviour
             spaceship.transform.position = backPoint.position;
             Color color = screenSwtichImage.color;
             screenSwtichImage.color = new Color(color.r, color.g, color.b,0);
-            
+            rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 
         }
     }
