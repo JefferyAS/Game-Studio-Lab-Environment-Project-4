@@ -10,6 +10,8 @@ public class PlayerRecorder : MonoBehaviour
     public List<Vector3> recordPath;
     public List<float> recordShoot;
     public float recordInterval=0.5f;
+    public int round=0;
+    public GameObject enemyShip;
 
     private List<Vector3> currentPath;
     private List<float> currentShoot;
@@ -39,7 +41,10 @@ public class PlayerRecorder : MonoBehaviour
         startTime = Time.time;
         currentPath = new List<Vector3>();
         currentShoot = new List<float>();
-
+        if (round>0) {
+            GameObject enemy=Instantiate(enemyShip,transform.position,Quaternion.identity);
+            enemy.GetComponent<EnemyShipScript>().Setup(recordPath,recordShoot);
+        }
     }
     public void RecordShooting() {
         if (currentShoot != null&& isRecording) {
@@ -51,6 +56,7 @@ public class PlayerRecorder : MonoBehaviour
         isRecording = false;
         recordPath = currentPath;
         recordShoot = currentShoot;
+        round += 1;
         Debug.Log(currentPath);
     }
 }
