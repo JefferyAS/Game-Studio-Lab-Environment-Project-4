@@ -17,6 +17,12 @@ public class PlayerRecorder : MonoBehaviour
     private List<float> currentShoot;
     private float startTime;
     private float recordTimer;
+
+    private bool isSpawned;
+
+    public GameObject[] round1Objects;
+    public GameObject[] round2Objects;
+    public GameObject[] round3Objects;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,10 +47,6 @@ public class PlayerRecorder : MonoBehaviour
         startTime = Time.time;
         currentPath = new List<Vector3>();
         currentShoot = new List<float>();
-        if (round>0) {
-            GameObject enemy=Instantiate(enemyShip,transform.position,Quaternion.identity);
-            enemy.GetComponent<EnemyShipScript>().Setup(recordPath,recordShoot);
-        }
     }
     public void RecordShooting() {
         if (currentShoot != null&& isRecording) {
@@ -57,6 +59,32 @@ public class PlayerRecorder : MonoBehaviour
         recordPath = currentPath;
         recordShoot = currentShoot;
         round += 1;
+        if (round == 1) {
+            for (int i = 0; i < round1Objects.Length; i++) {
+                round1Objects[i].SetActive(true);
+            }
+        }
+        else if(round==2){
+            for (int i = 0; i < round2Objects.Length; i++)
+            {
+                round2Objects[i].SetActive(true);
+            }
+        }
+        else if (round == 3)
+        {
+            for (int i = 0; i < round3Objects.Length; i++)
+            {
+                round3Objects[i].SetActive(true);
+            }
+        }
         Debug.Log(currentPath);
+    }
+    public void SpawnShip() {
+        if (round > 0&&!isSpawned)
+        {
+            GameObject enemy = Instantiate(enemyShip, transform.position, Quaternion.identity);
+            enemy.transform.Rotate(new Vector3(0,180,0));
+            enemy.GetComponent<EnemyShipScript>().Setup(recordPath, recordShoot);
+        }
     }
 }

@@ -11,6 +11,7 @@ public class HPSystem : MonoBehaviour
     public AudioSource deathAudio;
     public UIScriptManager uIScript;
     public Transform restartPoint;
+    public GameObject ruinPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +36,11 @@ public class HPSystem : MonoBehaviour
             deathAudio.Play();
             if (isEnemyShip)
             {
+                Instantiate(ruinPrefab, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
             }
             else {
+                Instantiate(ruinPrefab, transform.position, Quaternion.identity);
                 uIScript.Lose();
                 ResetHP();
                 transform.position = restartPoint.position;

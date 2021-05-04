@@ -137,6 +137,7 @@ MonoBehaviour:
   deathAudio: {fileID: 0}
   uIScript: {fileID: 0}
   restartPoint: {fileID: 0}
+  ruinPrefab: {fileID: 1697405256174598787, guid: 40ad542d086f14edb84141a9f5d2f044, type: 3}
 --- !u!114 &2784764974363814963
 MonoBehaviour:
   m_ObjectHideFlags: 0
