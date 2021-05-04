@@ -313,3 +313,144 @@ System memory in use after: 166.8 MB.
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2046.
 Total: 18.197550 ms (FindLiveObjects: 0.471007 ms CreateObjectMapping: 0.168948 ms MarkObjects: 13.574890 ms  DeleteObjects: 3.978214 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1320.937375 seconds.
+  path: Assets/Materials/rust-spaceship.mat
+  artifactKey: Guid(cab497aa4e8924861ac11d10c3e7273d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/rust-spaceship.mat using Guid(cab497aa4e8924861ac11d10c3e7273d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df1a794ea42d8cf99cf61f90419c8e94') in 4.302564 seconds
+  Import took 4.686155 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004376 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.314 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1534 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 176.0 MB.
+System memory in use after: 175.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2090.
+Total: 3.468101 ms (FindLiveObjects: 0.282226 ms CreateObjectMapping: 0.057185 ms MarkObjects: 2.476589 ms  DeleteObjects: 0.650260 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 277.719459 seconds.
+  path: Assets/F3_Corvette/Prefabs/F3_Green Variant.prefab
+  artifactKey: Guid(1b9c9bd520ad54747a98d7222069677a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Prefabs/F3_Green Variant.prefab using Guid(1b9c9bd520ad54747a98d7222069677a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3e7c6b723ee29bf919c550d8bd9cabf') in 1.702798 seconds
+  Import took 1.711328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001534 seconds.
+  path: Assets/F3_Corvette/Prefabs/F3_Red Variant.prefab
+  artifactKey: Guid(481351381d17b144594f0cceef6ef608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Prefabs/F3_Red Variant.prefab using Guid(481351381d17b144594f0cceef6ef608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51be664e1b38b22f42003d6c3303713') in 0.032170 seconds
+  Import took 0.038302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/F3_Corvette/Prefabs/F3_Grey Variant.prefab
+  artifactKey: Guid(f00c8df389af47046baea2d14b531550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Prefabs/F3_Grey Variant.prefab using Guid(f00c8df389af47046baea2d14b531550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1d410663eb768858fb591148280eb0') in 0.032155 seconds
+  Import took 0.039079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/F3_Corvette/Prefabs/F3_Yellow Variant.prefab
+  artifactKey: Guid(4a44e7ddd5d26154cb1e23c0c3a2addb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Prefabs/F3_Yellow Variant.prefab using Guid(4a44e7ddd5d26154cb1e23c0c3a2addb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fe20ecd2ea725948bde69c3b635f7b2') in 0.028145 seconds
+  Import took 0.034130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.543324 seconds.
+  path: Assets/F3_Corvette/Textures/F3_AO.tif
+  artifactKey: Guid(1c2d94856a0846d46810faf0c4b38c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_AO.tif using Guid(1c2d94856a0846d46810faf0c4b38c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe1375a1b72f2f1775be93c7718cfbb7') in 0.262818 seconds
+  Import took 0.267384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/F3_Corvette/Textures/F3_Yellow.tif
+  artifactKey: Guid(a092f2b04513a644aa22f7940351bf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_Yellow.tif using Guid(a092f2b04513a644aa22f7940351bf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81ae1b436c12cfea5f817bc4d2842fd3') in 0.013884 seconds
+  Import took 0.019149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000831 seconds.
+  path: Assets/F3_Corvette/Textures/F3_roughness.tif
+  artifactKey: Guid(e7c748002a5bf3b4bbca642f1617c325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_roughness.tif using Guid(e7c748002a5bf3b4bbca642f1617c325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f62c7f47503c9bdb11261841e941cd') in 0.013589 seconds
+  Import took 0.018262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/F3_Corvette/Textures/F3_metallic.tif
+  artifactKey: Guid(9727a61ea56c9a844b9eed9b30317414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_metallic.tif using Guid(9727a61ea56c9a844b9eed9b30317414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef50ab33dac2309e638bb51a92f3d00f') in 0.013127 seconds
+  Import took 0.016860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/F3_Corvette/Textures/F3_glow.tif
+  artifactKey: Guid(138840311186e0945877b44cd56ef422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_glow.tif using Guid(138840311186e0945877b44cd56ef422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0743a4c52aaa03e297260d6c6b93e625') in 0.010613 seconds
+  Import took 0.015444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003423 seconds.
+  path: Assets/F3_Corvette/Textures/F3_Red.tif
+  artifactKey: Guid(0281472901f2b3f42be55669e274d164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_Red.tif using Guid(0281472901f2b3f42be55669e274d164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d547c0edb1ff47341d10c55be678af') in 0.020103 seconds
+  Import took 0.028887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000919 seconds.
+  path: Assets/F3_Corvette/Textures/F3_Grey.tif
+  artifactKey: Guid(4c79293b48effba48b7adc038fe38f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_Grey.tif using Guid(4c79293b48effba48b7adc038fe38f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74fac4de387b89bc4d611cee1698580b') in 0.023792 seconds
+  Import took 0.029332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002788 seconds.
+  path: Assets/F3_Corvette/Textures/F3_Green.tif
+  artifactKey: Guid(b3b46c34242010445b60790dee02de1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_Green.tif using Guid(b3b46c34242010445b60790dee02de1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60e6f0972d0dfab245c40ec1569670e1') in 0.026713 seconds
+  Import took 0.045673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001114 seconds.
+  path: Assets/F3_Corvette/Textures/F3_normal.tif
+  artifactKey: Guid(f6c7a92433d238a47a9cf48355a071ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_normal.tif using Guid(f6c7a92433d238a47a9cf48355a071ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b95d36eb9f35edfdfcce39e8cea198') in 0.053944 seconds
+  Import took 0.075688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003591 seconds.
+  path: Assets/F3_Corvette/Textures/F3_Grey.tif
+  artifactKey: Guid(4c79293b48effba48b7adc038fe38f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/F3_Corvette/Textures/F3_Grey.tif using Guid(4c79293b48effba48b7adc038fe38f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74fac4de387b89bc4d611cee1698580b') in 0.012679 seconds
+  Import took 0.022037 seconds .
+
