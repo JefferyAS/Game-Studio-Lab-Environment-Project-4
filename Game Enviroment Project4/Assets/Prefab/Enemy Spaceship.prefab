@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8943319337079813392, guid: b32129702d9684ab98f3063122f39d26, type: 3}
-  startForce: 5000
+  startForce: -5000
   path: []
   shot: []
   startTime: 0

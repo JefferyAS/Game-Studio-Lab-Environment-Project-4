@@ -33,15 +33,19 @@ public class HPSystem : MonoBehaviour
             hitAudio.Play();
         }
         if (HP<=0) {
-            deathAudio.Play();
             if (isEnemyShip)
             {
                 Instantiate(ruinPrefab, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
             }
             else {
+                deathAudio.Play();
                 Instantiate(ruinPrefab, transform.position, Quaternion.identity);
                 uIScript.Lose();
+                GameObject enemy=GameObject.Find("Enemy Spaceship(Clone)");
+                if (enemy != null) {
+                    Destroy(enemy);
+                } 
                 ResetHP();
                 transform.position = restartPoint.position;
             }

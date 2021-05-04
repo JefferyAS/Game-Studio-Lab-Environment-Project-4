@@ -23,7 +23,7 @@ public class BulletScript : MonoBehaviour
     {
         if (other.tag=="Obstacle") {
             GameObject.Find("Hit Audio Player").GetComponent<AudioSource>().Play();
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<ObstacleScript>().ObstacleDestroy();
             Destroy(this.gameObject);
         }
         else if (other.tag == "Enemy")

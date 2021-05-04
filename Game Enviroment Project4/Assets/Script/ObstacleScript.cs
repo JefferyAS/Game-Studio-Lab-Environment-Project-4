@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleScript : MonoBehaviour
 {
+    public GameObject particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,11 @@ public class ObstacleScript : MonoBehaviour
     {
         if (collision.gameObject.tag=="Player") {
             //create particle effect
-            Destroy(gameObject);
+            ObstacleDestroy();
         }
+    }
+    public void ObstacleDestroy() {
+        Instantiate(particle, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }

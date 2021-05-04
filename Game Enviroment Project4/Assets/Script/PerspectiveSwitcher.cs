@@ -29,6 +29,9 @@ public class PerspectiveSwitcher : MonoBehaviour
     public Vector3 cameraBackPoint;
     public Quaternion cameraBackRotation;
 
+    public bool gameFinish;
+    public SceneLoader sceneLoader;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +71,9 @@ public class PerspectiveSwitcher : MonoBehaviour
             leftTime -= Time.deltaTime;
         }
         else if(isBack &&leftTime<=0){
+            if (gameFinish) {
+                sceneLoader.LoadScene(2);
+            }
             isBack = false;
             camera3d.SetActive(true);
             camera2d.SetActive(false);
@@ -79,7 +85,7 @@ public class PerspectiveSwitcher : MonoBehaviour
             Color color = screenSwtichImage.color;
             screenSwtichImage.color = new Color(color.r, color.g, color.b,0);
             rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
+            
         }
     }
     public void StartSwitch() {
@@ -90,6 +96,7 @@ public class PerspectiveSwitcher : MonoBehaviour
         camera3d.GetComponent<Animator>().enabled = true;
         camera3d.GetComponent<Animator>().SetTrigger("switch");
         extendedFlycam.enabled = false;
+        gameFinish = false;
     }
     public void StartBack() {
         leftTime = backTime;

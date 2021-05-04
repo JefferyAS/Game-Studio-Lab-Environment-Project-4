@@ -77,7 +77,6 @@ public class PlayerRecorder : MonoBehaviour
                 round3Objects[i].SetActive(true);
             }
         }
-        Debug.Log(currentPath);
     }
     public void SpawnShip() {
         if (round > 0&&!isSpawned)
