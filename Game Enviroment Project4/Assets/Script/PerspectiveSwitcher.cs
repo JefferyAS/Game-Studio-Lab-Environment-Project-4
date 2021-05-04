@@ -31,6 +31,9 @@ public class PerspectiveSwitcher : MonoBehaviour
 
     public bool gameFinish;
     public SceneLoader sceneLoader;
+    public TextFade winText;
+
+    public GameObject Ui2DPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +53,7 @@ public class PerspectiveSwitcher : MonoBehaviour
         }
         else if(isSwitching && leftTime <= 0)
         {
+            Ui2DPanel.SetActive(true);
             spaceship.transform.position = targetPosition.position;
             spaceship.transform.rotation = Quaternion.identity;
             camera3d.SetActive(false);
@@ -99,7 +103,11 @@ public class PerspectiveSwitcher : MonoBehaviour
         gameFinish = false;
     }
     public void StartBack() {
+        Ui2DPanel.SetActive(false);
         leftTime = backTime;
         isBack = true;
+        if (gameFinish) {
+            winText.ShowText();
+        }
     }
 }

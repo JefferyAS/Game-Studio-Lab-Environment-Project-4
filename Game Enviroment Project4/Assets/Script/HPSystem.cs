@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HPSystem : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class HPSystem : MonoBehaviour
     public Transform restartPoint;
     public GameObject ruinPrefab;
     public ParticleSystem particle;
+
+    public Text healthNum;
+    public Text healthText;
+    public Color highHPColor;
+    public Color LowHPColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +34,30 @@ public class HPSystem : MonoBehaviour
         else {
             particle.Stop();
         }
+        if (!isEnemyShip) {
+            healthNum.text = HP.ToString();
+            if (HP <= maxHP / 2) {
+                healthText.color = LowHPColor;
+                healthNum.color = LowHPColor;
+            }
+            else {
+                healthText.color = highHPColor;
+                healthNum.color = highHPColor;
+            }
+            
+        }
     }
     public void ResetHP()
     {
         HP = maxHP;
+        particle.Stop();
     }
     public void LoseHealth(int damage) {
         HP -= damage;
+        if (HP <= maxHP / 2)
+        {
+            particle.Play();
+        }
         if (!isEnemyShip) {
             hitAudio.Play();
         }

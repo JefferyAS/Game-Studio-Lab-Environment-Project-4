@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerRecorder : MonoBehaviour
 {
     public GameObject player;
@@ -23,6 +22,11 @@ public class PlayerRecorder : MonoBehaviour
     public GameObject[] round1Objects;
     public GameObject[] round2Objects;
     public GameObject[] round3Objects;
+    public TextFade round1Text;
+    public TextFade round2Text;
+    public TextFade round3Text;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,12 +66,14 @@ public class PlayerRecorder : MonoBehaviour
         if (round == 1) {
             for (int i = 0; i < round1Objects.Length; i++) {
                 round1Objects[i].SetActive(true);
+                round1Text.ShowText();
             }
         }
         else if(round==2){
             for (int i = 0; i < round2Objects.Length; i++)
             {
                 round2Objects[i].SetActive(true);
+                round2Text.ShowText();
             }
         }
         else if (round == 3)
@@ -75,6 +81,7 @@ public class PlayerRecorder : MonoBehaviour
             for (int i = 0; i < round3Objects.Length; i++)
             {
                 round3Objects[i].SetActive(true);
+                round3Text.ShowText();
             }
         }
     }
