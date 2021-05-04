@@ -12,6 +12,7 @@ public class HPSystem : MonoBehaviour
     public UIScriptManager uIScript;
     public Transform restartPoint;
     public GameObject ruinPrefab;
+    public ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,12 @@ public class HPSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (HP<=maxHP/2) {
+            particle.Play();
+        }
+        else {
+            particle.Stop();
+        }
     }
     public void ResetHP()
     {
