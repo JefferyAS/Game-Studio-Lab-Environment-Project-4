@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cbc75a4ce184c9a87513c55fee8024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 4
+  maxHP: 2
   HP: 0
   isEnemyShip: 1
   hitAudio: {fileID: 0}
@@ -140,6 +140,10 @@ MonoBehaviour:
   restartPoint: {fileID: 0}
   ruinPrefab: {fileID: 1697405256174598787, guid: 40ad542d086f14edb84141a9f5d2f044, type: 3}
   particle: {fileID: 5908549839626703786}
+  healthNum: {fileID: 0}
+  healthText: {fileID: 0}
+  highHPColor: {r: 0, g: 0, b: 0, a: 0}
+  LowHPColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2784764974363814963
 MonoBehaviour:
   m_ObjectHideFlags: 0
